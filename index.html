@@ -48,6 +48,7 @@
     <button onclick="generateJob()">🔮 Discover a Future Job</button>
     <p id="job"></p>
     <p id="skills"></p>
+    <p id="qualifications"></p>
     <br>
     <a class="answer-button" href="https://docs.google.com/forms/d/e/1FAIpQLScJts1mwGePJB1mI8h0gF2FpydU2qrDELMqL-wr1Qb18rr7fw/viewform?usp=dialog" target="_blank">
         📝 Write About a Future Job
@@ -127,6 +128,58 @@
             
             document.getElementById("job").innerText = `🛠️ Job: ${randomJob} - ${jobs[randomJob]}`;
             document.getElementById("skills").innerText = `🎯 Skills Needed: ${randomSkills}`;
+        }
+            function getQualifications() {
+            const qualifications = [
+                "🎓 Bachelor's degree in a related field",
+                "📜 Certification in advanced technology or science",
+                "💼 Internship or hands-on experience in a similar industry",
+                "🧪 Strong background in research and innovation",
+                "🌍 Multilingual skills for global collaboration",
+                "🔬 Practical knowledge of AI, robotics, or biotech",
+                "📢 Strong communication and leadership abilities",
+                "📊 Experience with data analysis and critical thinking",
+                "🛠️ Hands-on technical expertise in emerging fields",
+                "🚀 Passion for future technology and adaptability"
+            ];
+            return qualifications.sort(() => 0.5 - Math.random()).slice(0, 3).join(", ");
+        }
+
+        function generateJob() {
+            const jobs = {
+                "Climate Engineer": "Designs and controls the weather using advanced technology to reduce extreme heat, storms, and pollution.",
+                "Memory Surgeon": "Helps people delete painful memories or improve learning by enhancing brain functions.",
+                "AI Ethics Consultant": "Works with companies to ensure robots and AI systems make fair and moral decisions.",
+                "Space Tour Guide": "Takes tourists on trips to the Moon, Mars, or space stations, explaining history and science.",
+                "Cybernetic Body Mechanic": "Repairs and upgrades robotic body parts for people with high-tech prosthetics.",
+                "Vertical Farm Designer": "Builds tall, high-tech farms inside cities to grow fresh food for millions of people.",
+                "Virtual Reality Architect": "Designs entire cities, schools, and amusement parks inside virtual reality worlds.",
+                "Disease Predictor": "Uses genetic science and AI to predict and prevent illnesses before they happen.",
+                "Digital Identity Creator": "Helps people create realistic virtual versions of themselves for online work and social life.",
+                "Alien Language Translator": "Works with scientists to understand and communicate with possible extraterrestrial life."
+            };
+            
+            const skills = [
+                "🔍 Critical Thinking",
+                "🤝 Communication",
+                "💡 Creativity",
+                "🧪 Science & Technology Knowledge",
+                "📊 Data Analysis",
+                "🌍 Adaptability",
+                "👨‍💻 Digital Skills",
+                "🌱 Environmental Awareness",
+                "🎭 Emotional Intelligence",
+                "🔬 Curiosity"
+            ];
+            
+            const jobKeys = Object.keys(jobs);
+            const randomJob = jobKeys[Math.floor(Math.random() * jobKeys.length)];
+            const randomSkills = skills.sort(() => 0.5 - Math.random()).slice(0, 4).join(", ");
+            const randomQualifications = getQualifications();
+            
+            document.getElementById("job").innerText = `🛠️ Job: ${randomJob} - ${jobs[randomJob]}`;
+            document.getElementById("skills").innerText = `🎯 Skills Needed: ${randomSkills}`;
+            document.getElementById("qualifications").innerText = `📜 Qualifications Needed: ${randomQualifications}`;
         }
     </script>
 </body>
