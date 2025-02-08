@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobs of the Future</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff5733;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            background-color: #337aff;
+            color: white;
+        }
+        .answer-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Created by Panagiotis Domvros 2025 (CC BY-NC)</h2>
+    <p>You will be randomly given a future job and the skills and qualifications required for it. Click on the next button and write whether you are suitable for it or not. Provide arguments for your answer!</p>
+    <button onclick="openHelpTab()">❓ Help</button>
+    <h1>🚀 Jobs of the Future 🚀</h1>
+    <p>Click the button to get a random job of the future. Think about its skills and qualifications. Then, write your own view about this job.</p>
+    <button onclick="generateJob()">🔮 Discover a Future Job</button>
+    <p id="job"></p>
+    <p id="skills"></p>
+    <br>
+    <a class="answer-button" href="https://docs.google.com/forms/d/e/1FAIpQLScJts1mwGePJB1mI8h0gF2FpydU2qrDELMqL-wr1Qb18rr7fw/viewform?usp=dialog" target="_blank">
+        📝 Write About a Future Job
+    </a>
+
+    <script>
+        function openHelpTab() {
+            const helpWindow = window.open('', '_blank', 'width=600,height=500');
+            helpWindow.document.write(`
+                <html>
+                <head>
+                    <title>Helpful Words & Phrases</title>
+                    <style>
+                        body { font-family: 'Comic Sans MS', cursive, sans-serif; text-align: center; padding: 20px; }
+                        h2 { color: #ff5733; }
+                        ul { text-align: left; display: inline-block; }
+                    </style>
+                </head>
+                <body>
+                    <h2>Useful Words & Phrases</h2>
+                    <ul>
+                        <li>✅ I believe this job is suitable for me because...</li>
+                        <li>❌ I don’t think I would enjoy this job because...</li>
+                        <li>🎯 The most important skill for this job is...</li>
+                        <li>🤔 In my opinion, this job is challenging because...</li>
+                        <li>💡 One of the benefits of this job is...</li>
+                        <li>🔄 However, one disadvantage could be...</li>
+                        <li>🚀 This job could change the world by...</li>
+                        <li>📚 To qualify for this job, I would need to...</li>
+                        <li>🛠️ Some of the required skills include...</li>
+                        <li>💬 In conclusion, I would/would not consider this job because...</li>
+                        <li>⚖️ This job requires a balance of technical and soft skills such as...</li>
+                        <li>🛑 I don’t think I would be suitable for this job because...</li>
+                        <li>📈 This career has great future potential because...</li>
+                        <li>❗ A big challenge in this job is...</li>
+                        <li>🔬 Scientific advancements may change this job by...</li>
+                        <li>📢 People in this profession need to be good at...</li>
+                        <li>💰 The financial prospects of this job are...</li>
+                        <li>📅 This job may evolve in the future by...</li>
+                        <li>👨‍🎓 Studying fields like ... would be necessary for this career.</li>
+                    </ul>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>
