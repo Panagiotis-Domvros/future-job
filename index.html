@@ -89,7 +89,11 @@
                         <li>📅 This job may evolve in the future by...</li>
                         <li>👨‍🎓 Studying fields like ... would be necessary for this career.</li>
                     </ul>
-                    <script>
+                </body>
+                </html>
+            `);
+        }
+
         function generateJob() {
             const jobs = {
                 "Climate Engineer": "Designs and controls the weather using advanced technology to reduce extreme heat, storms, and pollution.",
@@ -123,11 +127,6 @@
             
             document.getElementById("job").innerText = `🛠️ Job: ${randomJob} - ${jobs[randomJob]}`;
             document.getElementById("skills").innerText = `🎯 Skills Needed: ${randomSkills}`;
-        }
-    </script>
-</body>
-                </html>
-            `);
         }
     </script>
 </body>
