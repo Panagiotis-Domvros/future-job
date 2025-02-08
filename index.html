@@ -89,7 +89,43 @@
                         <li>📅 This job may evolve in the future by...</li>
                         <li>👨‍🎓 Studying fields like ... would be necessary for this career.</li>
                     </ul>
-                </body>
+                    <script>
+        function generateJob() {
+            const jobs = {
+                "Climate Engineer": "Designs and controls the weather using advanced technology to reduce extreme heat, storms, and pollution.",
+                "Memory Surgeon": "Helps people delete painful memories or improve learning by enhancing brain functions.",
+                "AI Ethics Consultant": "Works with companies to ensure robots and AI systems make fair and moral decisions.",
+                "Space Tour Guide": "Takes tourists on trips to the Moon, Mars, or space stations, explaining history and science.",
+                "Cybernetic Body Mechanic": "Repairs and upgrades robotic body parts for people with high-tech prosthetics.",
+                "Vertical Farm Designer": "Builds tall, high-tech farms inside cities to grow fresh food for millions of people.",
+                "Virtual Reality Architect": "Designs entire cities, schools, and amusement parks inside virtual reality worlds.",
+                "Disease Predictor": "Uses genetic science and AI to predict and prevent illnesses before they happen.",
+                "Digital Identity Creator": "Helps people create realistic virtual versions of themselves for online work and social life.",
+                "Alien Language Translator": "Works with scientists to understand and communicate with possible extraterrestrial life."
+            };
+            
+            const skills = [
+                "🔍 Critical Thinking",
+                "🤝 Communication",
+                "💡 Creativity",
+                "🧪 Science & Technology Knowledge",
+                "📊 Data Analysis",
+                "🌍 Adaptability",
+                "👨‍💻 Digital Skills",
+                "🌱 Environmental Awareness",
+                "🎭 Emotional Intelligence",
+                "🔬 Curiosity"
+            ];
+            
+            const jobKeys = Object.keys(jobs);
+            const randomJob = jobKeys[Math.floor(Math.random() * jobKeys.length)];
+            const randomSkills = skills.sort(() => 0.5 - Math.random()).slice(0, 4).join(", ");
+            
+            document.getElementById("job").innerText = `🛠️ Job: ${randomJob} - ${jobs[randomJob]}`;
+            document.getElementById("skills").innerText = `🎯 Skills Needed: ${randomSkills}`;
+        }
+    </script>
+</body>
                 </html>
             `);
         }
